@@ -250,6 +250,12 @@
 	icon_state = "sandstonevault"
 	base_icon_state = "sandstonevault"
 
+/turf/open/floor/stonebrick
+	name = "stone brick path"
+	icon = 'icons/turf/floors/stonebrick.dmi'
+	icon_state = "stonebrick"
+	base_icon_state = "stonebrick"
+
 /turf/open/floor/cult
 	name = "engraved floor"
 	icon_state = "cult"
