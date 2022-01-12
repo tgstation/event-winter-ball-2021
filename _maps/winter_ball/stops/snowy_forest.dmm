@@ -122,6 +122,17 @@
 	icon_state = "snow_dug"
 	},
 /area/space)
+"fz" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/turf/open/floor/holofloor/snow{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "gd" = (
 /turf/open/floor/plating/ice,
 /area/space)
@@ -130,6 +141,12 @@
 	dir = 8
 	},
 /turf/open/floor/stonebrick,
+/area/space)
+"gW" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/turf/open/floor/plating/ice,
 /area/space)
 "hk" = (
 /turf/open/floor/carpet/red,
@@ -153,6 +170,10 @@
 "ig" = (
 /obj/structure/chair/sofa/bench/right,
 /turf/open/floor/wood/tile,
+/area/space)
+"il" = (
+/obj/structure/window/reinforced/fulltile/ice,
+/turf/open/floor/plating,
 /area/space)
 "iA" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -207,11 +228,23 @@
 /obj/structure/flora/tree/pine,
 /turf/open/floor/holofloor/snow,
 /area/space)
+"lY" = (
+/obj/structure/chair/comfy/brown{
+	dir = 8
+	},
+/turf/open/floor/wood/tile,
+/area/space)
 "mu" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
 	},
 /turf/open/floor/wood/large,
+/area/space)
+"mR" = (
+/obj/structure/chair/sofa/right{
+	dir = 8
+	},
+/turf/open/floor/carpet/red,
 /area/space)
 "mS" = (
 /obj/structure/flora/grass/green,
@@ -361,6 +394,9 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/holofloor/snow,
 /area/space)
+"xI" = (
+/turf/open/floor/wood/parquet,
+/area/space)
 "ym" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -369,15 +405,6 @@
 	layer = 3
 	},
 /turf/open/floor/stonebrick,
-/area/space)
-"yN" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 8
-	},
-/turf/open/floor/wood/tile,
 /area/space)
 "yS" = (
 /obj/structure/fireplace,
@@ -399,10 +426,17 @@
 	},
 /turf/open/floor/wood,
 /area/space)
+"Ar" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/red,
+/area/space)
 "Av" = (
 /turf/open/floor/iron/stairs{
 	dir = 1
 	},
+/area/space)
+"BD" = (
+/turf/open/space/basic,
 /area/space)
 "BM" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -418,6 +452,12 @@
 "Ch" = (
 /obj/structure/flora/tree/pine,
 /turf/open/floor/holofloor/snow,
+/area/space)
+"Cu" = (
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/turf/open/floor/carpet/red,
 /area/space)
 "Cy" = (
 /obj/structure/railing/corner,
@@ -513,6 +553,12 @@
 /obj/structure/flora/tree/pine,
 /turf/open/floor/holofloor/snow,
 /area/space)
+"JD" = (
+/obj/structure/chair/comfy/brown{
+	dir = 8
+	},
+/turf/open/floor/carpet/red,
+/area/space)
 "JY" = (
 /obj/structure/chair/sofa/bench/right{
 	dir = 1
@@ -580,8 +626,31 @@
 /obj/structure/flora/grass/brown,
 /turf/open/floor/holofloor/snow,
 /area/space)
+"NX" = (
+/obj/structure/chair/sofa/corner{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/space)
+"OD" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 5
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 8
+	},
+/turf/open/floor/holofloor/snow{
+	icon_state = "snow_dug"
+	},
+/area/space)
 "OH" = (
 /turf/closed/indestructible/wood,
+/area/space)
+"QE" = (
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/turf/open/floor/wood/tile,
 /area/space)
 "RE" = (
 /obj/effect/turf_decal/weather/snow/corner,
@@ -609,6 +678,10 @@
 "Sn" = (
 /turf/closed/wall/ice,
 /area/space)
+"SM" = (
+/obj/structure/chair/stool/bar/directional/south,
+/turf/open/floor/wood/tile,
+/area/space)
 "SO" = (
 /obj/structure/chair/sofa/bench/left,
 /turf/open/floor/wood/tile,
@@ -621,6 +694,12 @@
 /turf/open/floor/holofloor/snow{
 	icon_state = "snow_dug"
 	},
+/area/space)
+"Ub" = (
+/obj/structure/chair/sofa/corner{
+	dir = 8
+	},
+/turf/open/floor/carpet/red,
 /area/space)
 "Ud" = (
 /obj/effect/turf_decal/siding/wood{
@@ -710,6 +789,12 @@
 	},
 /turf/open/floor/wood/large,
 /area/space)
+"XR" = (
+/obj/structure/chair/sofa{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/space)
 "Ya" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 1
@@ -735,6 +820,12 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/ice,
+/area/space)
+"YH" = (
+/obj/structure/chair/sofa/left{
+	dir = 4
+	},
+/turf/open/floor/carpet/red,
 /area/space)
 "Zm" = (
 /obj/structure/table/wood,
@@ -7021,10 +7112,10 @@ aD
 aD
 aD
 aD
-GZ
-GZ
-GZ
-GZ
+aD
+aD
+aD
+aD
 GZ
 GZ
 GZ
@@ -7186,7 +7277,7 @@ EU
 EU
 GZ
 GZ
-iA
+RE
 aD
 aD
 aD
@@ -7212,17 +7303,17 @@ aD
 aD
 aD
 aD
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 GZ
 GZ
 GZ
@@ -7379,42 +7470,42 @@ GZ
 GZ
 GZ
 GZ
-iA
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
-aD
 GZ
-GZ
+RE
+aD
+EE
+EH
 aD
 aD
 aD
 aD
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
+aD
+aD
+aD
+aD
+aD
+aD
+OD
+Vm
+aD
+aD
+aD
+aD
+RQ
+aD
+aD
+aD
+aD
+aD
+bw
+EH
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 GZ
 GZ
 GZ
@@ -7572,6 +7663,28 @@ GZ
 GZ
 GZ
 GZ
+xg
+xg
+xg
+eP
+iA
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+pK
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+fz
 iA
 aD
 aD
@@ -7584,12 +7697,6 @@ aD
 aD
 aD
 aD
-GZ
-aD
-aD
-aD
-aD
-aD
 aD
 aD
 GZ
@@ -7602,28 +7709,12 @@ GZ
 GZ
 GZ
 GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
+xI
+xI
+xI
+xI
+xI
+xI
 GZ
 GZ
 GZ
@@ -7790,15 +7881,15 @@ aD
 aD
 aD
 aD
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
-GZ
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+aD
 aD
 aD
 aD
@@ -20080,11 +20171,11 @@ aD
 ho
 aD
 OH
-yN
-tw
-tw
-tw
-yN
+SQ
+SQ
+SQ
+SQ
+SQ
 OH
 aD
 aD
@@ -20272,13 +20363,13 @@ kk
 kk
 tO
 aD
-kk
+aD
 OH
-tw
-tw
-tw
-tw
-tw
+SQ
+SQ
+SQ
+SQ
+SQ
 OH
 aD
 aD
@@ -20466,13 +20557,13 @@ kk
 kk
 aD
 aD
-kk
+aD
 OH
-tw
-tw
-tw
-tw
-tw
+SQ
+SQ
+SQ
+SQ
+SQ
 OH
 aD
 kk
@@ -20658,21 +20749,21 @@ aD
 kk
 kk
 aD
-aD
-aD
-aD
+OH
+OH
 OH
 OH
 OH
 tw
+il
+tw
 OH
 OH
 OH
-aD
-aD
-aD
-aD
-aD
+OH
+OH
+OH
+OH
 kk
 aD
 ho
@@ -20851,22 +20942,22 @@ aD
 aD
 aD
 aD
-aD
-aD
-aD
 OH
 OH
-SQ
-SQ
-SQ
-SQ
-SQ
+Cu
+Ar
+hk
+tw
+tw
+tw
+tw
+tw
+tw
+tw
+tw
+tw
+tw
 OH
-OH
-aD
-aD
-aD
-aD
 aD
 aD
 ho
@@ -21045,22 +21136,22 @@ aD
 aD
 aD
 aD
-aD
 OH
+hk
+hk
+hk
+hk
+hk
+tw
+tw
+tw
+tw
+SM
+Zm
+tw
+tw
+tw
 OH
-OH
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
-OH
-aD
-aD
-aD
-aD
 aD
 aD
 aD
@@ -21239,23 +21330,23 @@ aD
 aD
 aD
 kk
-aD
 OH
 hk
 hk
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
+YH
+NX
+hk
+tw
+tw
+tw
+tw
+SM
+Zm
+tw
+tw
+tw
 OH
 aD
-kk
-aD
-aD
-kk
 mS
 aD
 aD
@@ -21433,23 +21524,23 @@ aD
 aD
 Jr
 kk
-aD
 OH
+yS
 hk
+Ar
+XR
 hk
-hk
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
+tw
+tw
+tw
+tw
+SM
+Zm
+tw
+tw
+tw
 OH
 aD
-kk
-aD
-aD
-kk
 kk
 aD
 ho
@@ -21627,22 +21718,22 @@ kk
 aD
 aD
 kk
-aD
 OH
-yS
 hk
 hk
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
+mR
+Ub
+hk
+tw
+tw
+tw
+tw
+SM
+Zm
+tw
+tw
+tw
 OH
-aD
-kk
-aD
-aD
 aD
 kk
 aD
@@ -21821,22 +21912,22 @@ kk
 aD
 aD
 aD
-aD
 OH
 hk
 hk
 hk
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
+hk
+hk
+tw
+tw
+tw
+tw
+SM
+Zm
+tw
+tw
+tw
 OH
-aD
-aD
-aD
-aD
 aD
 aD
 aD
@@ -22015,23 +22106,23 @@ Jr
 aD
 aD
 aD
-aD
 OH
+OH
+JD
+Ar
 hk
-hk
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
+tw
+tw
+tw
+tw
+tw
+SM
+Zm
+tw
+tw
+tw
 OH
 aD
-aD
-aD
-aD
-kk
 aD
 aD
 aD
@@ -22213,18 +22304,18 @@ aD
 OH
 OH
 OH
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
-SQ
 OH
-aD
-aD
-aD
-aD
+tw
+tw
+tw
+tw
+tw
+OH
+OH
+OH
+tw
+OH
+OH
 aD
 aD
 aD
@@ -22406,18 +22497,18 @@ aD
 aD
 aD
 aD
-OH
-OH
-SQ
-SQ
-SQ
-SQ
-SQ
-OH
-OH
-kk
 aD
-WU
+OH
+QE
+tw
+tw
+tw
+QE
+OH
+tw
+tw
+tw
+OH
 aD
 aD
 aD
@@ -22602,16 +22693,16 @@ aD
 aD
 aD
 OH
-SQ
-SQ
-SQ
-SQ
-SQ
+Zm
+tw
+tw
+tw
+Zm
 OH
-aD
-aD
-aD
-aD
+tw
+tw
+tw
+OH
 aD
 aD
 aD
@@ -22796,16 +22887,16 @@ aD
 aD
 aD
 OH
+lY
+tw
+tw
+tw
+lY
 OH
+tw
+tw
+tw
 OH
-OH
-OH
-OH
-OH
-aD
-aD
-aD
-aD
 aD
 aD
 aD
@@ -22989,18 +23080,18 @@ aD
 kk
 kk
 aD
+OH
+BD
+BD
+BD
+BD
+BD
+OH
+OH
+OH
+OH
+OH
 aD
-aD
-aD
-aD
-aD
-aD
-aD
-kk
-kk
-aD
-kk
-kk
 aD
 aD
 aD
@@ -23184,17 +23275,17 @@ Jr
 kk
 aD
 aD
+BD
+BD
+BD
+BD
+BD
 aD
 aD
-kk
-kk
-kk
 aD
-kk
-kk
 aD
-kk
-kk
+aD
+aD
 aD
 aD
 aD
@@ -23380,9 +23471,9 @@ kk
 aD
 aD
 aD
-kk
-kk
-kk
+aD
+aD
+aD
 aD
 aD
 aD
@@ -23574,9 +23665,9 @@ aD
 aD
 aD
 aD
-Jr
-kk
-kk
+aD
+aD
+aD
 aD
 kk
 kk
@@ -28349,7 +28440,7 @@ aD
 aD
 aD
 aD
-aD
+GZ
 aD
 aD
 aD
@@ -28543,8 +28634,8 @@ aD
 aD
 aD
 aD
-aD
-aD
+GZ
+GZ
 aD
 aD
 aD
@@ -28737,8 +28828,8 @@ kk
 kk
 aD
 aD
-aD
-aD
+GZ
+GZ
 aD
 aD
 aD
@@ -28931,8 +29022,8 @@ kk
 kk
 aD
 aD
-aD
-kk
+GZ
+GZ
 aD
 aD
 aD
@@ -29125,9 +29216,9 @@ aD
 aD
 aD
 aD
-aD
-aD
-aD
+GZ
+GZ
+GZ
 aD
 aD
 kk
@@ -29319,9 +29410,9 @@ aD
 aD
 aD
 aD
-kk
-kk
-kk
+GZ
+GZ
+GZ
 aD
 aD
 aD
@@ -29512,11 +29603,11 @@ CE
 aD
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+LQ
+oi
+xI
+KP
+LQ
 CE
 CE
 CE
@@ -29706,11 +29797,11 @@ CE
 CE
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+gd
+SQ
+gd
+KP
+gd
 CE
 CE
 CE
@@ -29900,11 +29991,11 @@ CE
 CE
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+gd
+SQ
+gd
+SQ
+gd
 CE
 CE
 CE
@@ -30094,11 +30185,11 @@ CE
 CE
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+gd
+gd
+gd
+gd
+gd
 CE
 CE
 CE
@@ -30288,11 +30379,11 @@ CE
 CE
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+gd
+gd
+gd
+gd
+gd
 CE
 CE
 CE
@@ -30482,11 +30573,11 @@ CE
 CE
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+gd
+gd
+gd
+SQ
+gd
 CE
 CE
 CE
@@ -30554,7 +30645,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 LQ
 CE
@@ -30676,11 +30767,11 @@ CE
 CE
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+gd
+oi
+xI
+KP
+gd
 CE
 CE
 CE
@@ -30748,7 +30839,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -30870,11 +30961,11 @@ CE
 CE
 CE
 CE
-CE
-CE
-CE
-CE
-CE
+gd
+oi
+xI
+KP
+gd
 CE
 CE
 CE
@@ -30942,7 +31033,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -31064,11 +31155,11 @@ aD
 aD
 aD
 aD
-CE
-CE
-CE
-CE
-CE
+gW
+oi
+xI
+KP
+qI
 CE
 CE
 CE
@@ -31136,7 +31227,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -31259,8 +31350,8 @@ aD
 aD
 aD
 aD
-aD
-aD
+GZ
+GZ
 aD
 CE
 CE
@@ -31276,10 +31367,10 @@ aD
 vP
 aD
 aD
-GZ
-GZ
-GZ
-GZ
+aD
+aD
+aD
+aD
 GZ
 GZ
 GZ
@@ -31330,7 +31421,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -31453,11 +31544,8 @@ aD
 aD
 aD
 aD
-aD
-aD
-aD
-aD
-aD
+GZ
+GZ
 aD
 aD
 aD
@@ -31473,9 +31561,12 @@ GZ
 GZ
 GZ
 GZ
-GZ
-GZ
-GZ
+aD
+aD
+aD
+aD
+aD
+aD
 GZ
 GZ
 GZ
@@ -31524,7 +31615,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -31648,12 +31739,12 @@ aD
 aD
 aD
 aD
+GZ
 aD
 aD
 aD
-aD
-aD
-aD
+GZ
+GZ
 aD
 aD
 aD
@@ -31666,10 +31757,10 @@ GZ
 GZ
 GZ
 GZ
-GZ
-GZ
-GZ
-GZ
+aD
+aD
+aD
+aD
 aD
 aD
 aD
@@ -31718,7 +31809,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -31850,16 +31941,16 @@ aD
 aD
 aD
 aD
-aD
-aD
-aD
-aD
-aD
 GZ
 GZ
 GZ
 GZ
 GZ
+GZ
+GZ
+GZ
+aD
+aD
 aD
 aD
 aD
@@ -31912,7 +32003,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -32106,7 +32197,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -32300,7 +32391,7 @@ CE
 CE
 gd
 oi
-SQ
+xI
 KP
 gd
 CE
@@ -32494,7 +32585,7 @@ CE
 CE
 qI
 oi
-SQ
+xI
 KP
 gd
 CE
