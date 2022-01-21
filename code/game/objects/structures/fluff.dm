@@ -201,15 +201,6 @@
 	anchored = TRUE
 	deconstructible = FALSE
 
-/obj/structure/fluff/christmas_lamp
-	name = "decorative lamp post"
-	desc = "A lamp post decorated with a festive reef."
-	icon = 'icons/obj/2x2.dmi'
-	icon_state = "lightpost"
-	density = TRUE
-	anchored = TRUE
-	deconstructible = FALSE
-
 /obj/structure/fluff/beach_umbrella
 	name = "beach umbrella"
 	desc = "A fancy umbrella designed to keep the sun off beach-goers."
