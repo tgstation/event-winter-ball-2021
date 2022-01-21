@@ -15,7 +15,6 @@
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
 #include "_modular_event\disable_mouse_entered.dm"
-#include "_modular_event\winter_ball_2021\snowy_forest.dm"
 #include "code\_compile_options.dm"
 #include "code\_debugger.dm"
 #include "code\world.dm"
@@ -4091,4 +4090,5 @@
 #include "modular_event\winter_ball_2021\train\stops.dm"
 #include "modular_event\winter_ball_2021\train\subsystem.dm"
 #include "modular_event\winter_ball_2021\train\transition.dm"
+#include "modular_event\winter_ball_2021\snowy_forest\snowy_forest.dm"
 // END_INCLUDE
