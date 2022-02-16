@@ -5,7 +5,7 @@
 	// button_icon_state = "arena_heal"
 	cooldown_time = 30 SECONDS
 
-/datum/action/cooldown/return_to_train/Trigger()
+/datum/action/cooldown/return_to_train/Trigger(trigger_flags, atom/target)
 	var/mob/living/user = usr
 
 	. = ..()

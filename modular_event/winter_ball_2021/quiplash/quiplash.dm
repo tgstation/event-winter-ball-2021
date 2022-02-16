@@ -53,7 +53,7 @@
 	var/static/regex_cache = list()
 
 	/// Doesn't check clients
-	var/debug_mode = TRUE
+	var/debug_mode = FALSE
 
 	/// Crown effect shown over winners
 	var/obj/effect/winner_crown/winner_crown
@@ -63,6 +63,9 @@
 
 	/// Admin abuse specific prompt here
 	var/forced_prompt
+
+	/// sounds and notifications will emit from here
+	var/message_source
 
 /datum/quiplash_manager/proc/start()
 	set_state(QUIPLASH_BETWEEN_ROUNDS)
@@ -104,6 +107,7 @@
 			reset_round()
 			set_timeout(between_rounds_time,QUIPLASH_ANSWERING)
 	state = new_state
+	playsound(message_source, 'sound/effects/gong.ogg', 100, TRUE)
 
 /datum/quiplash_manager/proc/choose_players(ignored_players)
 	. = FALSE
@@ -143,6 +147,7 @@
 	previous_players[new_player_mob] = previous_players[new_player_mob] + 1
 	new_player_mob.forceMove(get_turf(stage_points[players.Find(new_player_mob)]))
 	//GIVE THEM EVENT SPEECH ENABLERS
+	ADD_TRAIT(new_player_mob, TRAIT_BYPASS_MEASURES, "quiplash")
 	ADD_TRAIT(new_player_mob, TRAIT_IMMOBILIZED, "quiplash")
 
 /datum/quiplash_manager/proc/remove_player(mob/player)
@@ -151,12 +156,13 @@
 	player.forceMove(get_safe_random_station_turf(audience_areas) || fallback_dump_turf)
 	//REMOVE EVENT SPEECH ENABLER
 	REMOVE_TRAIT(player, TRAIT_IMMOBILIZED, "quiplash")
+	REMOVE_TRAIT(player, TRAIT_BYPASS_MEASURES, "quiplash")
 
 /datum/quiplash_manager/proc/show_voting_message_to_audience()
 	for(var/mob/living/audience_member in audience_members)
 		if(audience_member in players)
 			continue
-		to_chat(audience_member,span_boldwarning("Vote for your favourite by saying their name or their answer!"))
+		to_chat(audience_member,span_big(span_boldwarning("Vote for your favourite by saying their name or their answer!")))
 
 /datum/quiplash_manager/proc/display_results()
 	var/list/vote_tally = list()
@@ -176,7 +182,7 @@
 		new /obj/effect/temp_visual/confetti(winner.loc)
 		if(!winner_crown)
 			winner_crown = new(null)
-		winner.vis_contents += winner_crown
+		winner.vis_contents |= winner_crown
 		addtimer(CALLBACK(src, .proc/remove_crown, winner), 2 MINUTES)
 
 /datum/quiplash_manager/proc/remove_crown(mob/crown_owner)
@@ -186,7 +192,7 @@
 	for(var/mob/player in players)
 		remove_player(player)
 	for(var/obj/effect/landmark/quiplash_stage_marker/spot in stage_points)
-		spot.maptext = null
+		spot.set_maptext(null)
 	current_prompt = null
 	answers = list()
 	votes = list()
@@ -203,6 +209,7 @@
 			if(client && client.mob)
 				random_name = client.mob.real_name
 		resulting_prompt = replacetext(resulting_prompt,"<ANYPLAYER>",random_name)
+	resulting_prompt = replacetext(resulting_prompt,"<BLANK>","_______")
 	return resulting_prompt
 
 /datum/quiplash_manager/proc/pick_prompt_and_start_answering()
@@ -217,11 +224,13 @@
 		tgui_input_text_async(player, "[current_prompt]", "Write your answer!", "", callback = CALLBACK(src,.proc/answer_made), timeout = answer_time)
 
 /datum/quiplash_manager/proc/display_answers()
+	log_game("Quiplash Question: [current_prompt]")
 	//Display answers over player spots
 	for(var/i in 1 to length(players))
 		var/obj/effect/landmark/quiplash_stage_marker/spot = stage_points[i]
 		var/answer = answers[players[i]]
-		spot.maptext = MAPTEXT("<span class='center'>[answer]</span>")
+		spot.set_maptext(MAPTEXT("<span class='center'>[answer]</span>"))
+		log_game("Quiplash Answer: [answer] by [key_name(players[i])]")
 
 /datum/quiplash_manager/proc/answer_made(answer)
 	var/mob/user = usr
@@ -358,6 +367,7 @@
 	game.add_audience_area(audience_area_instance)
 	game.init_landmarks(game_index)
 	game.fallback_dump_turf = get_turf(src)
+	game.message_source = src
 	game.load_prompts()
 
 	RegisterSignal(game,COMSIG_QUIPLASH_STATUS_UPDATE,.proc/update_status_display)
@@ -426,15 +436,22 @@
 	icon_state = "mic"
 	invisibility = 0
 	// Player prompts gets displayed on these
-	maptext_width = 256
-	maptext_x = -128 + 16
-	maptext_y = 35
 
 	plane = GAME_PLANE_UPPER
-	layer = ABOVE_MOB_LAYER + 0.1 // So the winner crown does not obstruct answer maptext
+	layer = ABOVE_MOB_LAYER + 0.1
 	pixel_y = -5 //change this when sprite changes
 
 	var/game_index = DEFAULT_GAME_INDEX
+
+	var/obj/effect/maptext_holder/text_holder
+
+/obj/effect/landmark/quiplash_stage_marker/Initialize(mapload)
+	. = ..()
+	text_holder = new(null)
+	vis_contents += text_holder
+
+/obj/effect/landmark/quiplash_stage_marker/proc/set_maptext(new_text)
+	text_holder.maptext = new_text
 
 /// Crown displayed over the winner
 /obj/effect/winner_crown
@@ -458,4 +475,13 @@
 /obj/effect/temp_visual/confetti
 	icon = 'modular_event/winter_ball_2021/quiplash/quiplash.dmi'
 	icon_state = "confetti" //replace with confetti temp visual
-	duration = 3
+	duration = 30
+
+/// This is here so prompts/answers go above runechat text so they're never obscured by players talking
+/obj/effect/maptext_holder
+	plane = RUNECHAT_PLANE
+	vis_flags = VIS_INHERIT_ID
+
+	maptext_width = 256
+	maptext_x = -128 + 16
+	maptext_y = 48 // above player and leaving a bit of space for one line of chat messages

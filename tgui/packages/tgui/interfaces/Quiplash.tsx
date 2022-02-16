@@ -19,7 +19,9 @@ export const Quiplash = (_, context) => {
     }));
   return (
     <Window
-      title="Quiplash Panel">
+      title="Quiplash Panel"
+      width={300}
+      height={500}>
       <Window.Content scrollable>
         {!!data.admin && (
           <Section title="Admin">
