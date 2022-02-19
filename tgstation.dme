@@ -15,6 +15,7 @@
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
 #include "_modular_event\disable_mouse_entered.dm"
+#include "_modular_event\__DEFINES\force_map.dm"
 #include "code\_compile_options.dm"
 #include "code\_debugger.dm"
 #include "code\world.dm"
@@ -4309,14 +4310,5 @@
 #include "modular_event\base\station_traits.dm"
 #include "modular_event\base\event_aheal\code\action.dm"
 #include "modular_event\base\event_aheal\code\living.dm"
-#include "modular_event\winter_ball_2021\train\_DEFINES.dm"
-#include "modular_event\winter_ball_2021\train\ambience.dm"
-#include "modular_event\winter_ball_2021\train\mapping.dm"
-#include "modular_event\winter_ball_2021\train\on_the_move.dm"
-#include "modular_event\winter_ball_2021\train\return_to_train.dm"
-#include "modular_event\winter_ball_2021\train\smoke_effect.dm"
-#include "modular_event\winter_ball_2021\train\stops.dm"
-#include "modular_event\winter_ball_2021\train\subsystem.dm"
-#include "modular_event\winter_ball_2021\train\transition.dm"
 #include "modular_event\winter_ball_2021\snowy_forest\snowy_forest.dm"
 // END_INCLUDE
