@@ -12,7 +12,7 @@
 	button_icon_state = IsAvailable() ? initial(button_icon_state) : "arena_heal_used"
 	return ..()
 
-/datum/action/cooldown/aheal/Trigger()
+/datum/action/cooldown/aheal/Trigger(trigger_flags, atom/target)
 	var/mob/living/user = usr
 
 	. = ..()
