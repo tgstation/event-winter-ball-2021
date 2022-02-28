@@ -1,6 +1,9 @@
 /datum/controller/subsystem/air
 	can_fire = FALSE
 
+/datum/controller/subsystem/air/add_to_active(turf/open/T, blockchanges)
+	T.air.parse_gas_string(T.real_initial_gas_mix)
+
 /obj/effect/hotspot/Initialize()
 	..()
 	return INITIALIZE_HINT_QDEL
