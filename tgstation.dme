@@ -4316,5 +4316,6 @@
 #include "modular_event\winter_ball_2021\quiplash\quiplash.dm"
 #include "modular_event\winter_ball_2021\snowy_forest\area.dm"
 #include "modular_event\winter_ball_2021\snowy_forest\no_slowdown.dm"
+#include "modular_event\winter_ball_2021\snowy_forest\sauna.dm"
 #include "modular_event\winter_ball_2021\snowy_forest\snowy_forest.dm"
 // END_INCLUDE

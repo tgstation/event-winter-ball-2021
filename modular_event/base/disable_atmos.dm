@@ -4,3 +4,15 @@
 /obj/effect/hotspot/Initialize()
 	..()
 	return INITIALIZE_HINT_QDEL
+
+/turf
+	var/real_initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+
+/turf/open/Initialize(mapload)
+	planetary_atmos = FALSE
+	return ..()
+
+// Avoid all initial gas mixes, without doing it on Initialize and eating up memory
+/datum/gas_mixture/copy_from_turf(turf/model)
+	parse_gas_string(model.real_initial_gas_mix)
+	return TRUE

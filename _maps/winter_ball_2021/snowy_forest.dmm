@@ -1559,6 +1559,12 @@
 	},
 /turf/open/floor/holofloor/snow,
 /area/event/snowy_forest)
+"eO" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 8
+	},
+/turf/open/floor/wood/parquet,
+/area/event/snowy_forest)
 "eP" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 8
@@ -1829,13 +1835,7 @@
 /turf/open/floor/wood/parquet,
 /area/event/snowy_forest)
 "fI" = (
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
-/area/event/snowy_forest)
-"fJ" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/wood,
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "fK" = (
 /obj/effect/turf_decal/siding/white{
@@ -1977,6 +1977,10 @@
 /obj/item/bouquet/rose,
 /turf/open/floor/wood,
 /area/event/snowy_forest)
+"gc" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/red,
+/area/event/snowy_forest)
 "gd" = (
 /turf/open/floor/plating/ice,
 /area/event/snowy_forest)
@@ -2047,6 +2051,10 @@
 /turf/open/floor/holofloor/snow{
 	icon_state = "snow_dug"
 	},
+/area/event/snowy_forest)
+"gr" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/wood,
 /area/event/snowy_forest)
 "gs" = (
 /obj/structure/fence/corner{
@@ -2229,9 +2237,7 @@
 /obj/structure/chair/sofa/bench/right{
 	dir = 8
 	},
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "ha" = (
 /obj/structure/chair/pew{
@@ -3510,9 +3516,7 @@
 /area/event/snowy_forest)
 "lk" = (
 /obj/structure/chair/sofa/bench,
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "ll" = (
 /turf/open/floor/iron/chapel{
@@ -3646,9 +3650,7 @@
 "lK" = (
 /obj/structure/table/wood,
 /obj/structure/bedsheetbin,
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "lL" = (
 /obj/structure/table/wood/fancy,
@@ -4184,6 +4186,10 @@
 "nz" = (
 /obj/structure/fluff/tram_rail,
 /turf/open/floor/iron/dark,
+/area/event/snowy_forest)
+"nB" = (
+/obj/structure/chair/sofa/corp/corner,
+/turf/open/floor/carpet/red,
 /area/event/snowy_forest)
 "nC" = (
 /obj/effect/turf_decal/weather/snow/corner,
@@ -4953,9 +4959,7 @@
 /obj/structure/chair/sofa/bench/left{
 	dir = 4
 	},
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "qh" = (
 /obj/structure/railing/corner,
@@ -4981,10 +4985,6 @@
 /turf/open/floor/stonebrick{
 	color = "#ccaf9d"
 	},
-/area/event/snowy_forest)
-"ql" = (
-/obj/effect/landmark/start/assistant,
-/turf/open/floor/wood,
 /area/event/snowy_forest)
 "qm" = (
 /obj/effect/turf_decal/siding/wood,
@@ -5892,6 +5892,10 @@
 /obj/structure/railing,
 /turf/open/floor/carpet/neon/simple/black,
 /area/event/snowy_forest)
+"tj" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/carpet/red,
+/area/event/snowy_forest)
 "tl" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
@@ -6165,6 +6169,10 @@
 	},
 /obj/structure/closet/secure_closet/security,
 /turf/open/floor/carpet/red,
+/area/event/snowy_forest)
+"um" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/carpet/royalblack,
 /area/event/snowy_forest)
 "un" = (
 /obj/structure/railing{
@@ -6442,6 +6450,11 @@
 	},
 /turf/open/floor/eighties/red,
 /area/event/snowy_forest)
+"vn" = (
+/obj/structure/table/wood,
+/obj/item/toy/plush/snakeplushie,
+/turf/open/floor/carpet/red,
+/area/event/snowy_forest)
 "vo" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/bottle/epinephrine{
@@ -6522,6 +6535,12 @@
 	},
 /obj/structure/hedge,
 /turf/open/floor/wood/tile,
+/area/event/snowy_forest)
+"vz" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 4
+	},
+/turf/open/floor/wood/parquet,
 /area/event/snowy_forest)
 "vA" = (
 /obj/machinery/smartfridge/drinks{
@@ -6802,6 +6821,12 @@
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/iron/grimy,
 /area/event/snowy_forest)
+"wo" = (
+/obj/structure/chair/sofa/corp{
+	dir = 8
+	},
+/turf/open/floor/wood/parquet,
+/area/event/snowy_forest)
 "wp" = (
 /obj/structure/closet/secure_closet/security,
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -6902,9 +6927,7 @@
 /obj/structure/sign/poster/official/no_erp{
 	pixel_x = -32
 	},
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "wB" = (
 /obj/machinery/door/airlock/wood/glass{
@@ -7437,9 +7460,7 @@
 /area/event/snowy_forest)
 "ys" = (
 /obj/effect/turf_decal/siding/wood/corner,
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "yt" = (
 /turf/open/floor/mineral/titanium,
@@ -7602,9 +7623,7 @@
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
 	},
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "yY" = (
 /obj/effect/turf_decal/siding/wood,
@@ -7735,9 +7754,7 @@
 /area/event/snowy_forest)
 "zv" = (
 /obj/structure/chair/sofa/bench/left,
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "zw" = (
 /obj/structure/sink{
@@ -8034,6 +8051,7 @@
 /area/event/snowy_forest)
 "Ar" = (
 /obj/structure/table/wood,
+/obj/item/toy/plush/beeplushie,
 /turf/open/floor/carpet/red,
 /area/event/snowy_forest)
 "As" = (
@@ -8185,9 +8203,7 @@
 /area/event/snowy_forest)
 "AS" = (
 /obj/effect/turf_decal/siding/wood,
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "AT" = (
 /obj/effect/turf_decal/siding/wood,
@@ -8378,6 +8394,10 @@
 	dir = 1
 	},
 /turf/open/floor/wood/large,
+/area/event/snowy_forest)
+"By" = (
+/obj/effect/landmark/start/assistant,
+/turf/open/floor/wood,
 /area/event/snowy_forest)
 "BA" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -9075,6 +9095,12 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/event/snowy_forest)
+"DO" = (
+/obj/structure/chair/sofa/corp/corner{
+	dir = 4
+	},
+/turf/open/floor/carpet/red,
+/area/event/snowy_forest)
 "DP" = (
 /obj/machinery/door/airlock/public/glass,
 /turf/open/floor/plating/elevatorshaft,
@@ -9183,6 +9209,11 @@
 "Em" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
+/area/event/snowy_forest)
+"En" = (
+/obj/structure/table/wood,
+/obj/item/toy/plush/nukeplushie,
+/turf/open/floor/carpet/red,
 /area/event/snowy_forest)
 "Eo" = (
 /obj/structure/table/wood/poker,
@@ -9462,6 +9493,10 @@
 "Fe" = (
 /obj/machinery/vending/games,
 /turf/open/floor/wood,
+/area/event/snowy_forest)
+"Ff" = (
+/obj/structure/chair/sofa/corp/right,
+/turf/open/floor/carpet/red,
 /area/event/snowy_forest)
 "Fg" = (
 /obj/effect/spawner/structure/window/reinforced/tinted,
@@ -9859,9 +9894,7 @@
 /area/event/snowy_forest)
 "Gl" = (
 /obj/structure/chair/sofa/bench/right,
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "Gm" = (
 /obj/structure/sign/departments/security{
@@ -11062,6 +11095,10 @@
 	name = "184 Main Street"
 	},
 /area/event/snowy_forest)
+"Kq" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/wood/parquet,
+/area/event/snowy_forest)
 "Ks" = (
 /turf/open/floor/carpet/black,
 /area/event/snowy_forest)
@@ -12159,6 +12196,10 @@
 "NG" = (
 /turf/open/floor/plating/ashplanet/ash,
 /area/event/snowy_forest)
+"NH" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/carpet/black,
+/area/event/snowy_forest)
 "NI" = (
 /obj/structure/railing{
 	dir = 4
@@ -13010,9 +13051,7 @@
 /obj/structure/chair/sofa/bench/left{
 	dir = 8
 	},
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "Qk" = (
 /obj/effect/turf_decal/siding/wood,
@@ -14717,6 +14756,10 @@
 	},
 /turf/open/floor/stone,
 /area/event/snowy_forest)
+"VX" = (
+/obj/structure/chair/sofa/corp/left,
+/turf/open/floor/carpet/red,
+/area/event/snowy_forest)
 "VY" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -15393,9 +15436,7 @@
 "Ym" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
-/turf/open/floor/wood{
-	initial_gas_mix = "o2=22;n2=42;water_vapor=40;TEMP=320"
-	},
+/turf/open/floor/wood/sauna,
 /area/event/snowy_forest)
 "Yn" = (
 /obj/effect/turf_decal/siding/wood,
@@ -15956,6 +15997,11 @@
 	dir = 4
 	},
 /turf/open/floor/iron/grimy,
+/area/event/snowy_forest)
+"ZY" = (
+/obj/structure/table/wood,
+/obj/item/toy/plush/carpplushie,
+/turf/open/floor/carpet/red,
 /area/event/snowy_forest)
 "ZZ" = (
 /obj/structure/table/wood/poker,
@@ -21289,8 +21335,8 @@ fI
 fI
 ys
 TJ
-Ar
-Ar
+gc
+gc
 OH
 LD
 aD
@@ -27225,7 +27271,7 @@ kk
 OH
 OH
 Uu
-Ar
+gc
 GR
 Ft
 OH
@@ -35686,7 +35732,7 @@ GL
 GL
 ve
 Rl
-Ar
+gc
 Ac
 OH
 yu
@@ -35943,7 +35989,7 @@ GL
 GL
 ve
 Rl
-Ar
+gc
 Ac
 OH
 qV
@@ -36200,7 +36246,7 @@ GL
 GL
 ve
 Rl
-Ar
+gc
 Ac
 OH
 rR
@@ -36457,7 +36503,7 @@ GL
 GL
 ve
 Rl
-Ar
+gc
 Ac
 OH
 yu
@@ -36719,7 +36765,7 @@ hk
 OH
 mR
 QE
-Ar
+gc
 Al
 GL
 yJ
@@ -37521,12 +37567,12 @@ tw
 kt
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 GZ
 RE
@@ -37778,12 +37824,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 GZ
 RE
@@ -38035,12 +38081,12 @@ SQ
 vr
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 GZ
 RE
@@ -38292,12 +38338,12 @@ SQ
 vr
 GZ
 OH
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 OH
 GZ
 RE
@@ -38549,12 +38595,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 GZ
 RE
@@ -38806,12 +38852,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 GZ
 RE
@@ -39063,12 +39109,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 GZ
 RE
@@ -39320,12 +39366,12 @@ SQ
 Ga
 GZ
 OH
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 OH
 GZ
 iA
@@ -39577,12 +39623,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -39834,12 +39880,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -40091,12 +40137,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -40341,19 +40387,19 @@ SQ
 KP
 OH
 Al
-fJ
+gr
 GL
 OH
 SQ
 DH
 GZ
 OH
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 OH
 RE
 aD
@@ -40605,12 +40651,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -40862,12 +40908,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -41119,12 +41165,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -41376,12 +41422,12 @@ SQ
 Ga
 GZ
 OH
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 OH
 RE
 aD
@@ -41633,12 +41679,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -41890,12 +41936,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -42147,12 +42193,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -42404,12 +42450,12 @@ SQ
 Ga
 GZ
 OH
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 OH
 RE
 aD
@@ -42632,8 +42678,8 @@ mj
 LZ
 Ed
 OH
-OH
-OH
+aD
+kk
 aD
 aD
 aD
@@ -42661,12 +42707,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -42876,23 +42922,23 @@ aD
 OH
 OH
 OH
-hk
-xI
+DO
+vz
 xI
 CH
 MW
 CY
 mj
 mj
-mj
+um
 mj
 mj
 xJ
 OH
-QB
-OH
-OH
-OH
+aD
+kk
+aD
+aD
 aD
 aD
 aD
@@ -42918,12 +42964,12 @@ SQ
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -43131,9 +43177,9 @@ aD
 aD
 OH
 OH
-Ar
+En
 Cu
-hk
+VX
 hk
 xI
 xI
@@ -43146,11 +43192,11 @@ mj
 Ks
 Ks
 OH
-QB
-QB
-QB
-OH
-OH
+aD
+aD
+aD
+aD
+aD
 kk
 aD
 aD
@@ -43175,12 +43221,12 @@ tw
 Ga
 GZ
 Da
-ql
-ql
-ql
-ql
-ql
-ql
+By
+By
+By
+By
+By
+By
 Da
 RE
 aD
@@ -43396,18 +43442,18 @@ hk
 xI
 kK
 Ks
+NH
 Ks
 Ks
 Ks
+NH
 Ks
-Ks
-Ks
-BX
-BX
-QB
-QB
-QB
 OH
+aD
+aD
+aD
+aD
+aD
 kk
 aD
 ho
@@ -43659,12 +43705,12 @@ zj
 zj
 OH
 Ks
-Ks
-BX
-QB
-QB
-QB
 OH
+aD
+aD
+aD
+aD
+aD
 kk
 aD
 ho
@@ -43901,7 +43947,7 @@ Qm
 RE
 aD
 OH
-hk
+tj
 hk
 YH
 NX
@@ -43916,12 +43962,12 @@ UK
 BS
 OH
 Ks
-Ks
-BX
-QB
-QB
-QB
 OH
+aD
+aD
+tO
+aD
+aD
 aD
 aD
 ho
@@ -44160,7 +44206,7 @@ aD
 OH
 yS
 hk
-Ar
+gc
 XR
 hk
 hk
@@ -44173,12 +44219,12 @@ BS
 BS
 BS
 Ks
-Ks
-BX
-QB
-QB
-QB
 OH
+aD
+aD
+aD
+aD
+aD
 aD
 aD
 aD
@@ -44415,7 +44461,7 @@ Qm
 RE
 aD
 OH
-hk
+tj
 hk
 mR
 Ub
@@ -44430,12 +44476,12 @@ Fm
 BS
 OH
 Ks
-Ks
-BX
-QB
-QB
-QB
 OH
+aD
+aD
+aD
+aD
+aD
 aD
 aD
 aD
@@ -44687,12 +44733,12 @@ zj
 zj
 OH
 Ks
-Ks
-BX
-QB
-QB
-QB
 OH
+aD
+aD
+aD
+tO
+aD
 aD
 kk
 aD
@@ -44929,7 +44975,7 @@ am
 iA
 aD
 OH
-Ar
+vn
 hk
 hk
 hk
@@ -44938,18 +44984,18 @@ hk
 xI
 kK
 Ks
+NH
 Ks
 Ks
 Ks
+NH
 Ks
-Ks
-Ks
-BX
-BX
-QB
-QB
-QB
 OH
+aD
+aD
+aD
+aD
+aD
 aD
 kk
 aD
@@ -45187,9 +45233,9 @@ aD
 aD
 OH
 OH
-Ar
+ZY
 JD
-hk
+Ff
 hk
 xI
 xI
@@ -45202,11 +45248,11 @@ Ks
 Ks
 Ks
 OH
-QB
-QB
-QB
-OH
-OH
+aD
+aD
+aD
+aD
+aD
 aD
 kk
 aD
@@ -45446,9 +45492,9 @@ aD
 OH
 OH
 OH
-hk
-xI
-xI
+nB
+wo
+eO
 dP
 FX
 Xa
@@ -45458,11 +45504,11 @@ Xa
 Xa
 Xa
 Xa
-QB
-QB
 OH
-OH
-OH
+aD
+aD
+aD
+aD
 aD
 aD
 aD
@@ -45716,8 +45762,8 @@ xI
 bC
 xI
 OH
-OH
-OH
+aD
+aD
 aD
 aD
 aD
@@ -45968,7 +46014,7 @@ bC
 xI
 vp
 xI
-xI
+Kq
 xI
 vp
 xI
