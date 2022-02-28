@@ -12,12 +12,8 @@
 	button_icon_state = IsAvailable() ? initial(button_icon_state) : "arena_heal_used"
 	return ..()
 
-/datum/action/cooldown/aheal/Trigger(trigger_flags, atom/target)
+/datum/action/cooldown/aheal/Activate(atom/target)
 	var/mob/living/user = usr
-
-	. = ..()
-	if (!.)
-		return FALSE
 
 	// custom lightning bolt for sound
 	var/turf/lightning_source = get_step(get_step(user, NORTH), NORTH)
@@ -27,4 +23,7 @@
 		var/mob/living/carbon/human/human_target = user
 		human_target.electrocution_animation(LIGHTNING_BOLT_ELECTROCUTION_ANIMATION_LENGTH)
 	user.revive(TRUE, TRUE)
+
 	StartCooldown()
+
+	return TRUE
