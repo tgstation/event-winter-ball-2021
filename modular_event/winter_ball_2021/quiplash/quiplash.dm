@@ -10,6 +10,8 @@
 
 #define PROMPTS_FILE "modular_event/winter_ball_2021/quiplash/quiplash_prompts.txt"
 
+GLOBAL_LIST_EMPTY(quiplash_games)
+
 /datum/quiplash_manager
 	/// Current game phase
 	var/state = QUIPLASH_PAUSED
@@ -359,8 +361,8 @@
 
 /obj/structure/quiplash_statue/Initialize(mapload)
 	. = ..()
-	if(quiplash_games[game_index])
-		game = quiplash_games[game_index]
+	if(GLOB.quiplash_games[game_index])
+		game = GLOB.quiplash_games[game_index]
 		game.message_sources |= src
 	else
 		game = new
@@ -374,7 +376,7 @@
 		game.fallback_dump_turf = get_turf(src)
 		game.message_sources |= src
 		game.load_prompts()
-		quiplash_games[game_index] = game
+		GLOB.quiplash_games[game_index] = game
 
 	RegisterSignal(game,COMSIG_QUIPLASH_STATUS_UPDATE,.proc/update_status_display)
 
