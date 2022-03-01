@@ -6158,7 +6158,7 @@
 /turf/open/floor/iron/stairs/right{
 	dir = 1
 	},
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "rP" = (
 /obj/effect/turf_decal/siding/red{
 	dir = 8
@@ -8021,7 +8021,7 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "wU" = (
 /obj/structure/table,
 /obj/item/clothing/head/helmet/redtaghelm,
@@ -9893,6 +9893,22 @@
 	},
 /turf/open/floor/carpet/red,
 /area/event/snowy_forest)
+"Cw" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 4
+	},
+/obj/structure/quiplash_statue,
+/turf/open/floor/iron/dark,
+/area/event/snowy_forest)
 "Cx" = (
 /obj/structure/fluff/christmas_lamp,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -10108,7 +10124,7 @@
 "Df" = (
 /obj/structure/quiplash_statue,
 /turf/open/floor/mineral/plastitanium,
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "Dh" = (
 /obj/structure/table/wood,
 /obj/item/storage/book/bible,
@@ -11877,7 +11893,7 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "If" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -12641,7 +12657,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "Ku" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
@@ -13198,7 +13214,7 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "LU" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
@@ -15038,6 +15054,9 @@
 	},
 /turf/closed/indestructible/opsglass,
 /area/event/snowy_forest)
+"Re" = (
+/turf/open/floor/iron/stairs/right,
+/area/event/snowy_forest/quiplash_audience)
 "Rf" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -15507,6 +15526,9 @@
 	icon_state = "snow_dug"
 	},
 /area/event/snowy_forest)
+"Sz" = (
+/turf/closed/indestructible/iron,
+/area/event/snowy_forest/quiplash_audience)
 "SA" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -15688,6 +15710,10 @@
 	},
 /turf/open/floor/carpet/red,
 /area/event/snowy_forest)
+"Te" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/turf/open/floor/mineral/plastitanium,
+/area/event/snowy_forest/quiplash_audience)
 "Tf" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
@@ -16066,7 +16092,7 @@
 /turf/open/floor/iron/stairs/left{
 	dir = 1
 	},
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "Uh" = (
 /obj/structure/railing,
 /turf/open/floor/iron/dark/smooth_edge,
@@ -17070,7 +17096,7 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "WW" = (
 /obj/structure/table/wood/fancy/purple,
 /turf/open/floor/wood/parquet,
@@ -17160,6 +17186,9 @@
 /obj/item/reagent_containers/food/drinks/mug/tea,
 /turf/open/floor/pod,
 /area/event/snowy_forest)
+"Xj" = (
+/turf/open/floor/iron/stairs/left,
+/area/event/snowy_forest/quiplash_audience)
 "Xk" = (
 /obj/structure/flora/grass/green{
 	pixel_x = 21;
@@ -17604,6 +17633,9 @@
 	},
 /turf/open/floor/wood/large,
 /area/event/snowy_forest)
+"Yt" = (
+/turf/open/floor/mineral/plastitanium/red,
+/area/event/snowy_forest/quiplash_audience)
 "Yu" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -18139,7 +18171,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/event/snowy_forest)
+/area/event/snowy_forest/quiplash_audience)
 "ZK" = (
 /obj/structure/hedge,
 /turf/open/floor/mineral/titanium/tiled,
@@ -73779,9 +73811,9 @@ aa
 aa
 aa
 Ig
-Lu
-Wi
-Wi
+Te
+Yt
+Yt
 Ie
 wT
 Ie
@@ -74036,9 +74068,9 @@ Ig
 Ig
 Ig
 Ig
-Lu
-Wi
-Wi
+Te
+Yt
+Yt
 Ie
 wT
 Ie
@@ -74294,15 +74326,15 @@ Wc
 Wc
 Qr
 ZJ
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
 wT
 Ie
-Ig
-Ig
+Sz
+Sz
 Df
 aZ
 aZ
@@ -74550,9 +74582,9 @@ bT
 bT
 bT
 Qp
-PD
-Wi
-Wi
+Xj
+Yt
+Yt
 Ug
 LT
 Ug
@@ -74807,9 +74839,9 @@ bT
 bT
 bT
 Qp
-pZ
-Wi
-Wi
+Re
+Yt
+Yt
 rO
 Kt
 rO
@@ -75065,8 +75097,8 @@ kW
 di
 Qr
 Qr
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
@@ -75322,8 +75354,8 @@ Gu
 WY
 DL
 Qr
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
@@ -75579,13 +75611,13 @@ uw
 cI
 uT
 Qr
-Wi
-Wi
-Lu
+Yt
+Yt
+Te
 wT
-Lu
+Te
 wT
-Lu
+Te
 Ig
 Lu
 jN
@@ -75836,8 +75868,8 @@ Bm
 bb
 Jn
 Qr
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
@@ -76088,13 +76120,13 @@ aa
 Ig
 bO
 fJ
-fJ
+Cw
 fJ
 fJ
 bl
 Qr
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
@@ -76350,8 +76382,8 @@ ls
 rE
 IL
 Qr
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
@@ -76607,13 +76639,13 @@ vn
 mW
 IL
 Qr
-Wi
-Wi
-Lu
+Yt
+Yt
+Te
 wT
-Lu
+Te
 wT
-Lu
+Te
 Ig
 Lu
 jN
@@ -76864,8 +76896,8 @@ lH
 ko
 vY
 Qr
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
@@ -77121,8 +77153,8 @@ gc
 mN
 Qr
 Qr
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
@@ -77377,9 +77409,9 @@ nB
 nB
 nB
 Qp
-PD
-Wi
-Wi
+Xj
+Yt
+Yt
 Ug
 LT
 Ug
@@ -77634,9 +77666,9 @@ nB
 nB
 nB
 Qp
-pZ
-Wi
-Wi
+Re
+Yt
+Yt
 rO
 Kt
 rO
@@ -77892,15 +77924,15 @@ nB
 nB
 Qr
 WV
-Wi
-Wi
+Yt
+Yt
 Ie
 wT
 Ie
 wT
 Ie
-Ig
-Ig
+Sz
+Sz
 Df
 aZ
 aZ
@@ -78148,9 +78180,9 @@ Ig
 Ig
 Ig
 Ig
-Lu
-Wi
-Wi
+Te
+Yt
+Yt
 Ie
 wT
 Ie
@@ -78405,9 +78437,9 @@ aa
 aa
 aa
 Ig
-Lu
-Wi
-Wi
+Te
+Yt
+Yt
 Ie
 wT
 Ie
