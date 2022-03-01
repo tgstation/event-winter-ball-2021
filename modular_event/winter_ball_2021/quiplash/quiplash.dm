@@ -65,7 +65,7 @@
 	var/forced_prompt
 
 	/// sounds and notifications will emit from here
-	var/message_source
+	var/list/message_sources = list()
 
 /datum/quiplash_manager/proc/start()
 	set_state(QUIPLASH_BETWEEN_ROUNDS)
@@ -107,7 +107,8 @@
 			reset_round()
 			set_timeout(between_rounds_time,QUIPLASH_ANSWERING)
 	state = new_state
-	playsound(message_source, 'sound/effects/gong.ogg', 100, TRUE)
+	for(var/message_source in message_sources)
+		playsound(message_source, 'sound/effects/gong.ogg', 100, TRUE)
 
 /datum/quiplash_manager/proc/choose_players(ignored_players)
 	. = FALSE
@@ -358,17 +359,22 @@
 
 /obj/structure/quiplash_statue/Initialize(mapload)
 	. = ..()
-	game = new
-	var/area/audience_area_instance
-	if(!audience_area)
-		audience_area_instance = get_area(src);
+	if(quiplash_games[game_index])
+		game = quiplash_games[game_index]
+		game.message_sources |= src
 	else
-		audience_area_instance = get_area_instance_from_text(audience_area)
-	game.add_audience_area(audience_area_instance)
-	game.init_landmarks(game_index)
-	game.fallback_dump_turf = get_turf(src)
-	game.message_source = src
-	game.load_prompts()
+		game = new
+		var/area/audience_area_instance
+		if(!audience_area)
+			audience_area_instance = get_area(src);
+		else
+			audience_area_instance = get_area_instance_from_text(audience_area)
+		game.add_audience_area(audience_area_instance)
+		game.init_landmarks(game_index)
+		game.fallback_dump_turf = get_turf(src)
+		game.message_sources |= src
+		game.load_prompts()
+		quiplash_games[game_index] = game
 
 	RegisterSignal(game,COMSIG_QUIPLASH_STATUS_UPDATE,.proc/update_status_display)
 
