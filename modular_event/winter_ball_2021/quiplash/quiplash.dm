@@ -27,8 +27,10 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	var/list/previous_players = list()
 	/// Current players mobs
 	var/list/players = list()
-	/// Stage spawnpoints
-	var/list/stage_points = list()
+	/// Stage spawnpoints not currently in use
+	var/list/unassigned_stage_points = list()
+	/// Stage points currently in use indexed by player
+	var/list/assigned_stage_points = list()
 	/// All possible prompts
 	var/list/prompts = list("Why did the clown end up in the brig ?", "Place where assistants come from", "First entry on captain's to-do list")
 	/// Currently picked prompt
@@ -68,6 +70,12 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 
 	/// sounds and notifications will emit from here
 	var/list/message_sources = list()
+
+	/// audience members who opted out of playing
+	var/list/opted_out_audience = list()
+
+	///we put audience back from where we picked them up, this tracks the turfs
+	var/list/audience_return_point = list()
 
 /datum/quiplash_manager/proc/start()
 	set_state(QUIPLASH_BETWEEN_ROUNDS)
@@ -114,12 +122,12 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 
 /datum/quiplash_manager/proc/choose_players(ignored_players)
 	. = FALSE
-	var/player_count = length(stage_points) - length(players)
+	var/player_count = length(unassigned_stage_points)
 	var/list/filtered_audience = list()
 	for(var/mob/participant in audience_members)
 		if(!participant.client && !debug_mode)
 			continue
-		if(participant.stat == DEAD || (participant in ignored_players)) //Anything else ?
+		if(participant.stat == DEAD || (participant in ignored_players) || (participant.ckey in opted_out_audience)) //Anything else ?
 			continue
 		filtered_audience += participant
 	if(length(filtered_audience) < player_count)
@@ -147,8 +155,12 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 
 /datum/quiplash_manager/proc/make_player(mob/new_player_mob)
 	players |= new_player_mob
-	previous_players[new_player_mob] = previous_players[new_player_mob] + 1
-	new_player_mob.forceMove(get_turf(stage_points[players.Find(new_player_mob)]))
+	previous_players[new_player_mob.ckey] = previous_players[new_player_mob.ckey] + 1
+	var/obj/effect/landmark/quiplash_stage_marker/stage_point = pop(unassigned_stage_points)
+	stage_point.set_player_name(MAPTEXT("<span class='center'>[new_player_mob.real_name]</span>"))
+	assigned_stage_points[new_player_mob] = stage_point
+	audience_return_point[player] = get_turf(new_player_mob)
+	new_player_mob.forceMove(get_turf(stage_point))
 	//GIVE THEM EVENT SPEECH ENABLERS
 	ADD_TRAIT(new_player_mob, TRAIT_BYPASS_MEASURES, "quiplash")
 	ADD_TRAIT(new_player_mob, TRAIT_IMMOBILIZED, "quiplash")
@@ -156,7 +168,12 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 /datum/quiplash_manager/proc/remove_player(mob/player)
 	players -= player
 	answers -= player
-	player.forceMove(get_safe_random_station_turf(audience_areas) || fallback_dump_turf)
+	var/obj/effect/landmark/quiplash_stage_marker/stage_point = assigned_stage_points[player]
+	stage_point.set_player_name(null)
+	assigned_stage_points -= player
+	unassigned_stage_points |= stage_point
+	player.forceMove(audience_return_point[player] || get_safe_random_station_turf(audience_areas) || fallback_dump_turf)
+	audience_return_point -= player
 	//REMOVE EVENT SPEECH ENABLER
 	REMOVE_TRAIT(player, TRAIT_IMMOBILIZED, "quiplash")
 	REMOVE_TRAIT(player, TRAIT_BYPASS_MEASURES, "quiplash")
@@ -194,7 +211,7 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 /datum/quiplash_manager/proc/reset_round()
 	for(var/mob/player in players)
 		remove_player(player)
-	for(var/obj/effect/landmark/quiplash_stage_marker/spot in stage_points)
+	for(var/obj/effect/landmark/quiplash_stage_marker/spot in unassigned_stage_points)
 		spot.set_maptext(null)
 	current_prompt = null
 	answers = list()
@@ -229,11 +246,11 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 /datum/quiplash_manager/proc/display_answers()
 	log_game("Quiplash Question: [current_prompt]")
 	//Display answers over player spots
-	for(var/i in 1 to length(players))
-		var/obj/effect/landmark/quiplash_stage_marker/spot = stage_points[i]
-		var/answer = answers[players[i]]
+	for(var/mob/player in players)
+		var/obj/effect/landmark/quiplash_stage_marker/spot = assigned_stage_points[player]
+		var/answer = answers[player]
 		spot.set_maptext(MAPTEXT("<span class='center'>[answer]</span>"))
-		log_game("Quiplash Answer: [answer] by [key_name(players[i])]")
+		log_game("Quiplash Answer: [answer] by [key_name(player)]")
 
 /datum/quiplash_manager/proc/answer_made(answer)
 	var/mob/user = usr
@@ -257,7 +274,7 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	return max_value
 
 /datum/quiplash_manager/proc/add_stage_spot(obj/effect/landmark/quiplash_stage_marker/spot)
-	stage_points |= spot
+	unassigned_stage_points |= spot
 	return
 
 /datum/quiplash_manager/proc/set_timeout(delay,next_state)
@@ -277,10 +294,14 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 		add_audience_member(mover)
 
 /datum/quiplash_manager/proc/add_audience_member(mob/new_audience_member)
+	to_chat(new_audience_member,span_notice("You're now part of the audience."))
 	audience_members |= new_audience_member
 	RegisterSignal(new_audience_member,COMSIG_MOB_SAY, .proc/listen_to_vote)
 	RegisterSignal(new_audience_member,COMSIG_EXIT_AREA, .proc/audience_member_left_area)
 	RegisterSignal(new_audience_member,COMSIG_PARENT_QDELETING, .proc/audience_member_deleted)
+	var/datum/action/quiplash_opt_out/opt_out_action = new
+	opt_out_action.game = src
+	opt_out_action.Grant(new_audience_member)
 
 
 /datum/quiplash_manager/proc/audience_member_left_area(datum/source, area/area_left)
@@ -292,8 +313,11 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	remove_audience_member(source)
 
 /datum/quiplash_manager/proc/remove_audience_member(mob/audience_member)
+	to_chat(audience_member,span_notice("You're no longer part of the audience."))
 	audience_members -= audience_member
 	UnregisterSignal(audience_member,list(COMSIG_MOB_SAY,COMSIG_EXIT_AREA,COMSIG_PARENT_QDELETING))
+	for(var/datum/action/quiplash_opt_out/opt_out_action in audience_member.actions)
+		qdel(opt_out_action)
 
 /datum/quiplash_manager/proc/listen_to_vote(datum/source, list/speech_args)
 	SIGNAL_HANDLER
@@ -319,13 +343,31 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 		var/first_name = REGEX_QUOTE(player.first_name())
 		var/last_name = REGEX_QUOTE(player.last_name())
 		var/simplified_name = REGEX_QUOTE(simplify_name(basic_name))
-		regex_cache[basic_name] = search_regex = regex("[basic_name]|[first_name]|[last_name]|[simplified_name]", "i")
+		regex_cache[basic_name] = search_regex = regex("[basic_name]|[first_name]|[last_name]|[simplified_name]|[lizardify_message(basic_name)]|[lizardify_message(first_name)]|[lizardify_message(last_name)]|[lizardify_message(simplified_name)]", "i")
 	if(findtext(message,search_regex))
 		return TRUE
 	var/answer = answers[player]
 	if(findtext(message,answer))
 		return TRUE
 	return FALSE
+
+/datum/quiplash_manager/proc/lizardify_message(message)
+	if(!message)
+		return
+	var/static/regex/lizard_hiss = new("s+", "g")
+	var/static/regex/lizard_hiSS = new("S+", "g")
+	var/static/regex/lizard_kss = new(@"(\w)x", "g")
+	var/static/regex/lizard_kSS = new(@"(\w)X", "g")
+	var/static/regex/lizard_ecks = new(@"\bx([\-|r|R]|\b)", "g")
+	var/static/regex/lizard_eckS = new(@"\bX([\-|r|R]|\b)", "g")
+	if(message[1] != "*")
+		message = lizard_hiss.Replace(message, "sss")
+		message = lizard_hiSS.Replace(message, "SSS")
+		message = lizard_kss.Replace(message, "$1kss")
+		message = lizard_kSS.Replace(message, "$1KSS")
+		message = lizard_ecks.Replace(message, "ecks$1")
+		message = lizard_eckS.Replace(message, "ECKS$1")
+	return message
 
 /datum/quiplash_manager/proc/simplify_name(name)
 	//name with anything but letters and spaces removed
@@ -452,14 +494,20 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	var/game_index = DEFAULT_GAME_INDEX
 
 	var/obj/effect/maptext_holder/text_holder
+	var/obj/effect/maptext_holder/bottom/name_holder
 
 /obj/effect/landmark/quiplash_stage_marker/Initialize(mapload)
 	. = ..()
 	text_holder = new(null)
+	name_holder = new(null)
 	vis_contents += text_holder
+	vis_contents += name_holder
 
-/obj/effect/landmark/quiplash_stage_marker/proc/set_maptext(new_text)
-	text_holder.maptext = new_text
+/obj/effect/landmark/quiplash_stage_marker/proc/set_maptext(answer_text)
+	text_holder.maptext = answer_text
+
+/obj/effect/landmark/quiplash_stage_marker/proc/set_player_name(player_name)
+	name_holder.maptext = player_name
 
 /// Crown displayed over the winner
 /obj/effect/winner_crown
@@ -493,3 +541,25 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	maptext_width = 256
 	maptext_x = -128 + 16
 	maptext_y = 48 // above player and leaving a bit of space for one line of chat messages
+
+/// Player name under
+/obj/effect/maptext_holder/bottom
+	maptext_y = -18 // below player
+
+
+/datum/action/quiplash_opt_out
+	name = "Opt out of playing"
+	desc = "Press this if you do not want to be a player and just observe."
+	button_icon_state = "vote"
+	var/datum/quiplash_manager/game
+
+/datum/action/quiplash_opt_out/Trigger(trigger_flags)
+	. = ..()
+	if(!.)
+		return
+	if(owner.ckey in game.opted_out_audience)
+		game.opted_out_audience -= owner.ckey
+		to_chat(owner,"You will again be considered for the game.")
+	else
+		game.opted_out_audience += owner.ckey
+		to_chat(owner,"You will now be ignored when picking out players for the game. Press this button again to turn this off.")
