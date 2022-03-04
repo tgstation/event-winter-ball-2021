@@ -17667,6 +17667,10 @@
 	icon_state = "snow_dug"
 	},
 /area/event/snowy_forest)
+"uDb" = (
+/obj/machinery/telecomms/allinone/indestructable,
+/turf/closed/indestructible/rock/snow/ice/ore,
+/area/event/snowy_forest)
 "uDo" = (
 /obj/structure/table/abductor,
 /turf/open/floor/mineral/titanium,
@@ -21314,7 +21318,7 @@ jEJ
 jEJ
 jEJ
 jEJ
-jEJ
+uDb
 "}
 (2,1,1) = {"
 olJ
