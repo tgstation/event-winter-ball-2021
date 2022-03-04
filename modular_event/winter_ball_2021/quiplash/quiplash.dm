@@ -563,3 +563,6 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	else
 		game.opted_out_audience += owner.ckey
 		to_chat(owner,"You will now be ignored when picking out players for the game. Press this button again to turn this off.")
+
+/area/event/snowy_forest/quiplash_audience
+	name = "quiplash audience area"

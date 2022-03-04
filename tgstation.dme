@@ -4314,6 +4314,7 @@
 #include "modular_event\base\event_aheal\code\living.dm"
 #include "modular_event\winter_ball_2021\corn\corn.dm"
 #include "modular_event\winter_ball_2021\quiplash\quiplash.dm"
+#include "modular_event\winter_ball_2021\quiplash\quiplash_teleport.dm"
 #include "modular_event\winter_ball_2021\snowy_forest\area.dm"
 #include "modular_event\winter_ball_2021\snowy_forest\no_slowdown.dm"
 #include "modular_event\winter_ball_2021\snowy_forest\sauna.dm"
