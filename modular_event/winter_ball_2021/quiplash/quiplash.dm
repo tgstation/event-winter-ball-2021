@@ -159,7 +159,7 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	var/obj/effect/landmark/quiplash_stage_marker/stage_point = pop(unassigned_stage_points)
 	stage_point.set_player_name(MAPTEXT("<span class='center'>[new_player_mob.real_name]</span>"))
 	assigned_stage_points[new_player_mob] = stage_point
-	audience_return_point[player] = get_turf(new_player_mob)
+	audience_return_point[new_player_mob] = get_turf(new_player_mob)
 	new_player_mob.forceMove(get_turf(stage_point))
 	//GIVE THEM EVENT SPEECH ENABLERS
 	ADD_TRAIT(new_player_mob, TRAIT_BYPASS_MEASURES, "quiplash")
