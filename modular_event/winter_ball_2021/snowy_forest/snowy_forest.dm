@@ -9,7 +9,6 @@
 	desc = "A lamp post decorated with a festive reef."
 	icon = 'modular_event/winter_ball_2021/snowy_forest/2x2.dmi'
 	icon_state = "lightpost"
-	density = TRUE
 	anchored = TRUE
 	deconstructible = FALSE
 
