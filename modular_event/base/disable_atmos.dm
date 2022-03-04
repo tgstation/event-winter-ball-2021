@@ -2,7 +2,9 @@
 	can_fire = FALSE
 
 /datum/controller/subsystem/air/add_to_active(turf/open/T, blockchanges)
-	T.air.parse_gas_string(T.real_initial_gas_mix)
+	// add_to_active gets non-open turfs passed through turf/open :woozy:
+	if (istype(T))
+		T.air?.parse_gas_string(T.real_initial_gas_mix)
 
 /obj/effect/hotspot/Initialize()
 	..()

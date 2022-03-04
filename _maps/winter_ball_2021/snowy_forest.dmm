@@ -17667,9 +17667,6 @@
 	icon_state = "snow_dug"
 	},
 /area/event/snowy_forest)
-"uDb" = (
-/turf/open/space/basic,
-/area/event/snowy_forest)
 "uDo" = (
 /obj/structure/table/abductor,
 /turf/open/floor/mineral/titanium,
@@ -57062,7 +57059,7 @@ cZf
 scS
 kjS
 ajo
-uDb
+oLc
 oXl
 jSB
 jSB
