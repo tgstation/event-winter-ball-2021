@@ -4308,6 +4308,7 @@
 #include "modular_event\base\force_static_atmos.dm"
 #include "modular_event\base\free_chameleon_kits.dm"
 #include "modular_event\base\limit_jobs.dm"
+#include "modular_event\base\limit_pointing.dm"
 #include "modular_event\base\no_destruction.dm"
 #include "modular_event\base\no_diseases.dm"
 #include "modular_event\base\station_traits.dm"
