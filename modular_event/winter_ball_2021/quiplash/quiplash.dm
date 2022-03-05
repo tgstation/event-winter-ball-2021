@@ -77,6 +77,9 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	///we put audience back from where we picked them up, this tracks the turfs
 	var/list/audience_return_point = list()
 
+	///Camera action will focus here
+	var/stage_focus
+
 /datum/quiplash_manager/proc/start()
 	set_state(QUIPLASH_BETWEEN_ROUNDS)
 
@@ -108,7 +111,7 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 				set_state(QUIPLASH_ANSWERING)
 				return
 			display_answers()
-			show_voting_message_to_audience()
+			show_voting_tip()
 			set_timeout(vote_time,QUIPLASH_TOMATO_THROWING)
 		if(QUIPLASH_TOMATO_THROWING)
 			display_results()
@@ -178,7 +181,7 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	REMOVE_TRAIT(player, TRAIT_IMMOBILIZED, "quiplash")
 	REMOVE_TRAIT(player, TRAIT_BYPASS_MEASURES, "quiplash")
 
-/datum/quiplash_manager/proc/show_voting_message_to_audience()
+/datum/quiplash_manager/proc/show_voting_tip()
 	for(var/mob/living/audience_member in audience_members)
 		if(audience_member in players)
 			continue
@@ -241,7 +244,14 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 		if(!player.client)
 			set_answer(player, pick("Yo mamma","My ass"))
 			continue
-		tgui_input_text_async(player, "[current_prompt]", "Write your answer!", "", callback = CALLBACK(src,.proc/answer_made), timeout = answer_time)
+		get_answer(player)
+
+
+/datum/quiplash_manager/proc/get_answer(mob/player)
+	set waitfor = FALSE
+	var/fallback_value = tgui_input_text_async(player, "[current_prompt]", "Write your answer!", "", callback = CALLBACK(src,.proc/answer_made), timeout = answer_time)
+	if(fallback_value) //this is only for the people with tgui pref off
+		answer_made(fallback_value, player)
 
 /datum/quiplash_manager/proc/display_answers()
 	log_game("Quiplash Question: [current_prompt]")
@@ -252,8 +262,8 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 		spot.set_maptext(MAPTEXT("<span class='center'>[answer]</span>"))
 		log_game("Quiplash Answer: [answer] by [key_name(player)]")
 
-/datum/quiplash_manager/proc/answer_made(answer)
-	var/mob/user = usr
+/datum/quiplash_manager/proc/answer_made(answer, mob/user)
+	user = user || usr
 	if(!(user in players))
 		return
 	if(state != QUIPLASH_ANSWERING)
@@ -299,9 +309,14 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	RegisterSignal(new_audience_member,COMSIG_MOB_SAY, .proc/listen_to_vote)
 	RegisterSignal(new_audience_member,COMSIG_EXIT_AREA, .proc/audience_member_left_area)
 	RegisterSignal(new_audience_member,COMSIG_PARENT_QDELETING, .proc/audience_member_deleted)
+
 	var/datum/action/quiplash_opt_out/opt_out_action = new
 	opt_out_action.game = src
 	opt_out_action.Grant(new_audience_member)
+
+	var/datum/action/quiplash_look_at_stage/stage_focus_action = new
+	stage_focus_action.game = src
+	stage_focus_action.Grant(new_audience_member)
 
 
 /datum/quiplash_manager/proc/audience_member_left_area(datum/source, area/area_left)
@@ -316,8 +331,9 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	to_chat(audience_member,span_notice("You're no longer part of the audience."))
 	audience_members -= audience_member
 	UnregisterSignal(audience_member,list(COMSIG_MOB_SAY,COMSIG_EXIT_AREA,COMSIG_PARENT_QDELETING))
-	for(var/datum/action/quiplash_opt_out/opt_out_action in audience_member.actions)
-		qdel(opt_out_action)
+	for(var/datum/action/to_be_deleted in audience_member.actions)
+		if(to_be_deleted.type == /datum/action/quiplash_opt_out || to_be_deleted.type == /datum/action/quiplash_look_at_stage)
+			qdel(to_be_deleted)
 
 /datum/quiplash_manager/proc/listen_to_vote(datum/source, list/speech_args)
 	SIGNAL_HANDLER
@@ -401,6 +417,8 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	var/audience_area
 	var/datum/quiplash_manager/game
 
+	var/obj/effect/maptext_holder/statue_helptext/helptext_holder
+
 /obj/structure/quiplash_statue/Initialize(mapload)
 	. = ..()
 	if(GLOB.quiplash_games[game_index])
@@ -418,7 +436,13 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 		game.fallback_dump_turf = get_turf(src)
 		game.message_sources |= src
 		game.load_prompts()
+		for(var/obj/effect/landmark/quiplash_camera_focus_target/landmark in GLOB.landmarks_list)
+			if(landmark.game_index == game_index)
+				game.stage_focus = get_turf(landmark)
 		GLOB.quiplash_games[game_index] = game
+
+	helptext_holder = new(null)
+	vis_contents += helptext_holder
 
 	RegisterSignal(game,COMSIG_QUIPLASH_STATUS_UPDATE,.proc/update_status_display)
 
@@ -430,6 +454,7 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 /obj/structure/quiplash_statue/proc/update_status_display()
 	var/time_left = game.main_timer ? "[round(timeleft(game.main_timer)/10)]s" : ""
 	var/statetext = "HUH?"
+	var/helptext = ""
 	switch(game.state)
 		if(QUIPLASH_BETWEEN_ROUNDS)
 			statetext = "NEXT ROUND IN: "
@@ -439,11 +464,13 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 			statetext = "WRITE YOUR RESPONSE: "
 		if(QUIPLASH_VOTING)
 			statetext = "VOTE FOR THE BEST: "
+			helptext = "Vote for your favourite by saying their name or their answer!"
 		if(QUIPLASH_TOMATO_THROWING)
 			statetext = "CONGRATULATIONS TO THE WINNER: "
 	var/prompt_text = game.current_prompt ? "<br><font color='red'>[game.current_prompt]</font>" : "" //fix the centering
 	var/display_prompt = "<span class='center'>[statetext][time_left][prompt_text]</span>"
 	maptext = MAPTEXT("[display_prompt]")
+	helptext_holder.maptext = MAPTEXT("[helptext]")
 
 
 /obj/structure/quiplash_statue/ui_interact(mob/user, datum/tgui/ui)
@@ -509,6 +536,10 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 /obj/effect/landmark/quiplash_stage_marker/proc/set_player_name(player_name)
 	name_holder.maptext = player_name
 
+/obj/effect/landmark/quiplash_camera_focus_target
+	name = "quiplash camera focus"
+	var/game_index = DEFAULT_GAME_INDEX
+
 /// Crown displayed over the winner
 /obj/effect/winner_crown
 	name = "WINNER"
@@ -546,11 +577,16 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 /obj/effect/maptext_holder/bottom
 	maptext_y = -18 // below player
 
+/// Player name under
+/obj/effect/maptext_holder/statue_helptext
+	maptext_y = -10 // below player
+
 
 /datum/action/quiplash_opt_out
 	name = "Opt out of playing"
 	desc = "Press this if you do not want to be a player and just observe."
-	button_icon_state = "vote"
+	icon_icon = 'modular_event/winter_ball_2021/quiplash/quiplash.dmi'
+	button_icon_state = "mic_enabled"
 	var/datum/quiplash_manager/game
 
 /datum/action/quiplash_opt_out/Trigger(trigger_flags)
@@ -560,9 +596,40 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 	if(owner.ckey in game.opted_out_audience)
 		game.opted_out_audience -= owner.ckey
 		to_chat(owner,"You will again be considered for the game.")
+		name = initial(name)
+		desc = initial(desc)
+		button_icon_state = initial(button_icon_state)
+		UpdateButtonIcon()
 	else
 		game.opted_out_audience += owner.ckey
 		to_chat(owner,"You will now be ignored when picking out players for the game. Press this button again to turn this off.")
+		name = "Opt in"
+		desc = "Click to be considered for playing again"
+		button_icon_state = "mic_disabled"
+		UpdateButtonIcon()
 
 /area/event/snowy_forest/quiplash_audience
 	name = "quiplash audience area"
+
+
+/datum/action/quiplash_look_at_stage
+	name = "Focus on the sage"
+	desc = "Press this to look at the stage."
+	icon_icon = 'icons/obj/items_and_weapons.dmi'
+	button_icon_state = "binoculars"
+	var/datum/quiplash_manager/game
+	var/toggled = FALSE
+
+/datum/action/quiplash_look_at_stage/Trigger(trigger_flags)
+	. = ..()
+	if(!.)
+		return
+	toggled = !toggled
+	if(toggled)
+		owner.reset_perspective(game.stage_focus)
+	else
+		owner.reset_perspective()
+
+/datum/action/quiplash_look_at_stage/Remove(mob/M)
+	. = ..()
+	M.reset_perspective()
