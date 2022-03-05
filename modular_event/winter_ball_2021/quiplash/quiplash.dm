@@ -613,7 +613,7 @@ GLOBAL_LIST_EMPTY(quiplash_games)
 
 
 /datum/action/quiplash_look_at_stage
-	name = "Focus on the sage"
+	name = "Focus on the stage"
 	desc = "Press this to look at the stage."
 	icon_icon = 'icons/obj/items_and_weapons.dmi'
 	button_icon_state = "binoculars"
