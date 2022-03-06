@@ -469,8 +469,8 @@
 /area/event/snowy_forest)
 "aBz" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill1";
-	index = 4
+	index = 4;
+	monster_id = "silenthill1"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -1827,8 +1827,8 @@
 /area/event/snowy_forest)
 "cbo" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "B";
-	index = 4
+	index = 4;
+	monster_id = "B"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -3673,10 +3673,26 @@
 	dir = 8
 	},
 /area/event/snowy_forest)
+"eau" = (
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/red/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/blue/line{
+	dir = 4
+	},
+/obj/effect/landmark/quiplash_camera_focus_target,
+/turf/open/floor/iron/dark,
+/area/event/snowy_forest)
 "eaI" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill3";
-	index = 4
+	index = 4;
+	monster_id = "silenthill3"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -4507,8 +4523,8 @@
 /area/event/snowy_forest)
 "eVi" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill5";
-	index = 4
+	index = 4;
+	monster_id = "silenthill5"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -5410,8 +5426,8 @@
 /area/event/snowy_forest)
 "fXj" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill4";
-	index = 2
+	index = 2;
+	monster_id = "silenthill4"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -8311,8 +8327,8 @@
 /area/event/snowy_forest)
 "jmX" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill3";
-	index = 2
+	index = 2;
+	monster_id = "silenthill3"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -8374,8 +8390,8 @@
 /area/event/snowy_forest)
 "jpL" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "B";
-	index = 5
+	index = 5;
+	monster_id = "B"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -8636,8 +8652,8 @@
 /area/event/snowy_forest)
 "jEm" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill2";
-	index = 4
+	index = 4;
+	monster_id = "silenthill2"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -10484,8 +10500,8 @@
 /area/event/snowy_forest)
 "lHm" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill4";
-	index = 3
+	index = 3;
+	monster_id = "silenthill4"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -11078,8 +11094,8 @@
 /area/event/snowy_forest)
 "mns" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill5";
-	index = 2
+	index = 2;
+	monster_id = "silenthill5"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -12513,8 +12529,8 @@
 /area/event/snowy_forest)
 "nLv" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "B";
-	index = 6
+	index = 6;
+	monster_id = "B"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -13274,8 +13290,8 @@
 /area/event/snowy_forest)
 "oAE" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill5";
-	index = 3
+	index = 3;
+	monster_id = "silenthill5"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -13434,8 +13450,8 @@
 /area/event/snowy_forest)
 "oLa" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill2";
-	index = 2
+	index = 2;
+	monster_id = "silenthill2"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -14046,8 +14062,8 @@
 /area/event/snowy_forest)
 "pnH" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "B";
-	index = 2
+	index = 2;
+	monster_id = "B"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -14188,8 +14204,8 @@
 /area/event/snowy_forest)
 "pxZ" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill3";
-	index = 3
+	index = 3;
+	monster_id = "silenthill3"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -14916,8 +14932,8 @@
 /area/event/snowy_forest)
 "qoK" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "B";
-	index = 3
+	index = 3;
+	monster_id = "B"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -16535,8 +16551,8 @@
 /area/event/snowy_forest)
 "sbz" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill2";
-	index = 3
+	index = 3;
+	monster_id = "silenthill2"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -17293,8 +17309,8 @@
 /area/event/snowy_forest)
 "sQi" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill1";
-	index = 3
+	index = 3;
+	monster_id = "silenthill1"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -17683,8 +17699,8 @@
 /area/event/snowy_forest)
 "tmE" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill1";
-	index = 2
+	index = 2;
+	monster_id = "silenthill1"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -22041,8 +22057,8 @@
 /area/event/snowy_forest)
 "xHd" = (
 /obj/effect/landmark/cornfield_monster_path_point{
-	monster_id = "silenthill4";
-	index = 4
+	index = 4;
+	monster_id = "silenthill4"
 	},
 /obj/effect/cornfield,
 /turf/open/floor/plating/sandy_dirt,
@@ -80506,7 +80522,7 @@ rkT
 koK
 bgf
 pZr
-pZr
+eau
 pZr
 fBg
 nCL
