@@ -3064,10 +3064,7 @@
 /turf/open/floor/iron/dark,
 /area/event/snowy_forest)
 "dwP" = (
-/obj/structure/plaque/static_plaque/golden/commission{
-	name = "Event Staff Plaque";
-	pixel_y = 2
-	},
+/obj/structure/plaque/static_plaque/golden/winter_ball_2021,
 /turf/open/floor/iron,
 /area/event/snowy_forest)
 "dwQ" = (
@@ -9489,11 +9486,7 @@
 /area/event/snowy_forest)
 "kAx" = (
 /obj/effect/turf_decal/siding/wood,
-/obj/structure/plaque/static_plaque/golden/commission{
-	desc = "/tg/Station Winter Ball 2021/22\nSpecial Thanks to: Citrusgender, MrStonedOne\nEvent Mappers: MMMiracles, Zytolg, Cheshify, Tactical Tortoise, EOBGames\nEvent Spriters: Yeeye\nEvent Coders: Mothblocks, Anturk";
-	name = "Event Staff Plaque";
-	pixel_y = 2
-	},
+/obj/structure/plaque/static_plaque/golden/winter_ball_2021,
 /turf/open/floor/wood/parquet,
 /area/event/snowy_forest)
 "kBd" = (
