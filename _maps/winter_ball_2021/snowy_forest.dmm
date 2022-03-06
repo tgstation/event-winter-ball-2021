@@ -1480,6 +1480,14 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood,
 /area/event/snowy_forest)
+"bLF" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 3;
+	monster_id = "C"
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "bMe" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -3949,6 +3957,14 @@
 	dir = 4
 	},
 /area/event/snowy_forest)
+"eqM" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 13;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "erW" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -4225,6 +4241,13 @@
 	icon_state = "snow_dug"
 	},
 /area/event/snowy_forest)
+"eKz" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	monster_id = "D"
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "eLe" = (
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/carpet/red,
@@ -4258,6 +4281,11 @@
 	dir = 4
 	},
 /turf/open/floor/iron/smooth_large,
+/area/event/snowy_forest)
+"eOw" = (
+/obj/effect/cornfield,
+/obj/effect/cornfield_monster,
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "eOU" = (
 /obj/effect/turf_decal/weather/sand{
@@ -4722,6 +4750,14 @@
 /obj/structure/table/wood/shuttle_bar,
 /obj/machinery/computer/security/wooden_tv,
 /turf/open/floor/carpet/purple,
+/area/event/snowy_forest)
+"fqc" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 4;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "fqo" = (
 /obj/structure/bookcase/random,
@@ -5383,6 +5419,13 @@
 	},
 /turf/open/floor/wood/tile,
 /area/event/snowy_forest)
+"geX" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	monster_id = "B"
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "gfz" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
@@ -5648,6 +5691,12 @@
 	name = "Staff Area"
 	},
 /turf/open/floor/wood,
+/area/event/snowy_forest)
+"gug" = (
+/obj/effect/landmark/cornfield_monster_drop_point{
+	monster_id = "C"
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "guJ" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -5919,6 +5968,13 @@
 	dir = 5
 	},
 /turf/open/floor/carpet/red,
+/area/event/snowy_forest)
+"gJH" = (
+/obj/effect/landmark/cornfield_monster_path_point{
+	plane = -6
+	},
+/obj/effect/cornfield,
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "gJI" = (
 /obj/structure/sign/departments/medbay/alt{
@@ -6584,6 +6640,14 @@
 /obj/effect/turf_decal/caution/stand_clear,
 /turf/open/floor/iron/dark,
 /area/event/snowy_forest)
+"hrT" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 2;
+	monster_id = "C"
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "hsq" = (
 /obj/effect/turf_decal/siding/red/corner{
 	dir = 8
@@ -7091,6 +7155,12 @@
 /turf/open/floor/holofloor/snow{
 	icon_state = "snow_dug"
 	},
+/area/event/snowy_forest)
+"idF" = (
+/obj/effect/landmark/cornfield_monster_drop_point{
+	monster_id = "D"
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "iee" = (
 /obj/item/kirbyplants/random,
@@ -10119,6 +10189,14 @@
 /obj/structure/flora/bush,
 /turf/open/floor/holofloor/snow,
 /area/event/snowy_forest)
+"lHd" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 9;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "lIe" = (
 /obj/structure/fluff/tram_rail{
 	dir = 1
@@ -10313,6 +10391,14 @@
 /obj/structure/table/wood,
 /obj/item/storage/book/bible,
 /turf/open/floor/wood,
+/area/event/snowy_forest)
+"lSn" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 12;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "lSt" = (
 /obj/effect/turf_decal/tile/dark{
@@ -10959,6 +11045,14 @@
 	},
 /turf/open/floor/plating/ice,
 /area/event/snowy_forest)
+"mCz" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 11;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "mCB" = (
 /obj/structure/table/wood/fancy,
 /obj/effect/turf_decal/siding/wood,
@@ -11298,6 +11392,14 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
+/area/event/snowy_forest)
+"mTf" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 14;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "mUl" = (
 /obj/structure/table/wood,
@@ -12279,6 +12381,13 @@
 	},
 /obj/effect/turf_decal/arrows,
 /turf/open/floor/iron/dark,
+/area/event/snowy_forest)
+"nWG" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	monster_id = "C"
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "nWN" = (
 /obj/structure/fence{
@@ -14669,6 +14778,12 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/event/snowy_forest)
+"qEn" = (
+/obj/effect/landmark/cornfield_monster_drop_point{
+	monster_id = "B"
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "qEx" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/open/floor/plating/grass/jungle,
@@ -15397,6 +15512,13 @@
 	dir = 1
 	},
 /area/event/snowy_forest)
+"ryf" = (
+/obj/effect/cornfield,
+/obj/effect/cornfield_monster{
+	monster_id = "D"
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "ryD" = (
 /obj/structure/flora/grass/both,
 /turf/open/floor/holofloor/snow,
@@ -15767,6 +15889,14 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
+/area/event/snowy_forest)
+"rPw" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 5;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "rPB" = (
 /obj/structure/shuttle/engine/heater{
@@ -16154,6 +16284,13 @@
 "snQ" = (
 /obj/machinery/holopad,
 /turf/open/floor/iron/dark,
+/area/event/snowy_forest)
+"sok" = (
+/obj/effect/cornfield,
+/obj/effect/cornfield_monster{
+	monster_id = "B"
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "sou" = (
 /obj/effect/turf_decal/stripes/line,
@@ -17183,6 +17320,10 @@
 "tuY" = (
 /turf/open/floor/carpet/stellar,
 /area/event/snowy_forest)
+"tvb" = (
+/obj/effect/landmark/cornfield_monster_drop_point,
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "tvs" = (
 /obj/effect/decal/turf_decal/shadow/corner{
 	dir = 8
@@ -17511,6 +17652,14 @@
 /obj/structure/table/bronze,
 /obj/structure/bedsheetbin,
 /turf/open/floor/iron/corner,
+/area/event/snowy_forest)
+"tJE" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 16;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "tKr" = (
 /obj/effect/turf_decal/siding/red/corner,
@@ -18240,6 +18389,14 @@
 /obj/effect/turf_decal/siding/thinplating,
 /turf/open/floor/stonebrick,
 /area/event/snowy_forest)
+"utr" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 3;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "utt" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 6
@@ -18956,6 +19113,14 @@
 /obj/structure/table/wood/shuttle_bar,
 /turf/open/floor/bamboo,
 /area/event/snowy_forest)
+"vgN" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 2;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "vhf" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
@@ -19091,6 +19256,14 @@
 /obj/structure/table/reinforced/plastitaniumglass,
 /obj/item/paper/fluff,
 /turf/open/floor/iron/dark,
+/area/event/snowy_forest)
+"vqU" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 7;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "vrk" = (
 /obj/effect/decal/turf_decal/shadow,
@@ -19636,6 +19809,14 @@
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/mineral/titanium,
+/area/event/snowy_forest)
+"vVh" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 8;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "vXy" = (
 /obj/structure/table/abductor,
@@ -20362,6 +20543,14 @@
 	},
 /turf/open/floor/holofloor/snow,
 /area/event/snowy_forest)
+"wOZ" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 15;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
+/area/event/snowy_forest)
 "wPf" = (
 /turf/open/floor/grass/fakebasalt,
 /area/event/snowy_forest)
@@ -20408,6 +20597,13 @@
 	name = "bar shutters"
 	},
 /turf/open/floor/iron/dark,
+/area/event/snowy_forest)
+"wTq" = (
+/obj/effect/cornfield,
+/obj/effect/cornfield_monster{
+	monster_id = "C"
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "wTI" = (
 /obj/structure/chair/sofa/corp/corner{
@@ -20950,6 +21146,14 @@
 "xsL" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/iron/dark,
+/area/event/snowy_forest)
+"xsV" = (
+/obj/effect/cornfield,
+/obj/effect/landmark/cornfield_monster_path_point{
+	index = 10;
+	plane = -6
+	},
+/turf/open/floor/plating/sandy_dirt,
 /area/event/snowy_forest)
 "xtn" = (
 /obj/structure/sign/directions/command{
@@ -35239,12 +35443,12 @@ hvq
 fbS
 fbS
 hvq
+ryf
 fbS
 fbS
 fbS
 fbS
-fbS
-fbS
+eKz
 hvq
 fbS
 fbS
@@ -36266,6 +36470,7 @@ hvq
 fbS
 hvq
 fbS
+lSn
 fbS
 fbS
 fbS
@@ -36274,8 +36479,7 @@ fbS
 fbS
 fbS
 fbS
-fbS
-fbS
+eqM
 hvq
 fbS
 fbS
@@ -36789,9 +36993,9 @@ fbS
 fbS
 fbS
 hvq
+mTf
 fbS
-fbS
-fbS
+wOZ
 hvq
 fbS
 fbS
@@ -37293,8 +37497,8 @@ hvq
 fbS
 hvq
 fbS
-fbS
-fbS
+xsV
+mCz
 fbS
 fbS
 hvq
@@ -37563,11 +37767,11 @@ fbS
 fbS
 fbS
 fbS
+nWG
 fbS
 fbS
 fbS
-fbS
-fbS
+wTq
 xHg
 jEJ
 jEJ
@@ -37812,14 +38016,14 @@ fbS
 fbS
 fbS
 hvq
+idF
 hvq
-hvq
 fbS
 fbS
 fbS
 fbS
-fbS
-fbS
+eOw
+tJE
 fbS
 hvq
 hvq
@@ -38068,9 +38272,9 @@ fbS
 fbS
 hvq
 fbS
-hvq
+tvb
 isI
-hvq
+gug
 fbS
 hvq
 fbS
@@ -38326,7 +38530,7 @@ fbS
 hvq
 fbS
 hvq
-hvq
+qEn
 hvq
 fbS
 fbS
@@ -38578,6 +38782,9 @@ fbS
 fbS
 fbS
 hvq
+lHd
+fbS
+vVh
 fbS
 fbS
 fbS
@@ -38588,14 +38795,11 @@ fbS
 fbS
 fbS
 fbS
+hrT
 fbS
 fbS
 fbS
-fbS
-fbS
-fbS
-fbS
-fbS
+bLF
 xHg
 jEJ
 jEJ
@@ -38837,16 +39041,16 @@ fbS
 hvq
 fbS
 hvq
+vqU
 fbS
-fbS
-fbS
+rPw
 hvq
+vgN
 fbS
 fbS
 fbS
 fbS
-fbS
-fbS
+gJH
 fbS
 fbS
 hvq
@@ -40381,9 +40585,9 @@ fbS
 fbS
 fbS
 hvq
+fqc
 fbS
-fbS
-fbS
+utr
 fbS
 fbS
 hvq
@@ -40637,12 +40841,12 @@ hvq
 hvq
 fbS
 fbS
+geX
 fbS
 fbS
 fbS
 fbS
-fbS
-fbS
+sok
 hvq
 fbS
 fbS
